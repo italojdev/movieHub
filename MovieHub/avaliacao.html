@@ -4,40 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MovieHub| Avaliação</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/Favcon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/Favicon.ico" type="image/x-icon">
+    <style>
+        main{
+            min-width: 300px;
+            max-width: 1000px;
+            min-height: 500px;
+            max-height: 1000px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <aside>
-            <ul>
-                <h1>MovieHub</h1>
-                <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-            </ul>
+        <aside class="tituloPrincipal">
+            <h1>MovieHub</h1>
         </aside>
+        <nav>
+            <ul class="nav">
+                <li><a href="index.html">Página inicial</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="avaliacao.html">Avalie-nos</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <h1>Avaliação</h1>
-        <p>Utilize o campo abaixo para avaliar o nosso site</p>
-        <form>
-            <fieldset>
-                <legend>Avaliação</legend>
-                <label for="aname">Nome:</label>
-                <input type="text" id="aname" name="name"/>
-                <label for="aemail">E-mail:</label>
-                <input type="email" id="aemail" name="email"/>
-                <label for="atelefone">Telefone para contato</label>
-                <input type="number" id="atelefone" name="Telefone"/>
-                <label for="aavaliacao">Qual sua avaliação:</label>
-                <input type="range" id="aavaliacao" min="1" max="10" name="avaliacao"/>
-                <label for="film">Qual tipo de filve você assistiu</label>
-                <select name="film" id="film">
-                    <option value="premium">Premium</option>
-                    <option value="gratis">Grátis</option>
-                </select>
-            </fieldset>
-        </form>
+        <div class="conteudo">
+            <h1>Avaliação</h1>
+            <p>Utilize o campo abaixo para avaliar o nosso site</p>
+            <form>
+                <fieldset>
+                    <legend>Avaliação</legend>
+                    <label for="aname">Nome:</label>
+                    <input type="text" id="aname" name="name"/>
+                    <label for="aemail">E-mail:</label>
+                    <input type="email" id="aemail" name="email"/>
+                    <label for="atelefone">Telefone para contato</label>
+                    <input type="number" id="atelefone" name="Telefone"/>
+                    <label for="aavaliacao">Qual sua avaliação:</label>
+                    <input type="range" id="aavaliacao" min="1" max="10" name="avaliacao"/>
+                    <label for="film">Qual tipo de filve você assistiu</label>
+                    <select name="film" id="film">
+                        <option value="premium">Premium</option>
+                        <option value="gratis">Grátis</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
     </main>
+    <footer>
+        <p>&copy; 2024 MovieHub. TODOS OS DIREITOS RESERVADOS</p>
+    </footer>
 </body>
 </html>
