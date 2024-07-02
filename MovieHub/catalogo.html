@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieHub| catálogo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/Favicon.ico" type="image/x-icon">
+    <style>
+        main{
+            height: 1000px;
+        }
+        #carrossel{
+            display: flex;
+            flex-direction: row;
+            width: 250px;
+            height: 250px;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+        }
+        .carrossel{
+            flex: 0 0 100%;
+            list-style: none;
+            scroll-snap-align: start;
+        }
+        .carrossel:nth-child(1){
+            background-color: blueviolet;
+        }
+        .carrossel:nth-child(2){
+            background-color: pink;
+        }
+        .carrossel:nth-child(3){
+            background-color: blue;
+        }
+        .carrossel:nth-child(4){
+            background-color: red;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <header>
+        <aside class="tituloPrincipal">
+            <h1>MovieHub</h1>
+        </aside>
+        <ul class="nav">
+            <li><a href="index.html" rel="prev">Página inicial</a></li>
+            <div id="submenu">
+                <li><a href="catalogo.html" rel="next">Catálogo</a></li>
+                <li><a href="galeria.html" rel="next">Galeria</a></li>
+            </div>
+            </li>
+            <li><a href="avaliacao.html" rel="next">Avalie-nos</a></li>
+            <li><a href="sobreNos.html">Sobre nós</a></li>
+        </ul>
+    </header>
+    <main>
+        <ul id="carrossel">
+            <li class="carrossel"></li>
+            <li class="carrossel"></li>
+            <li class="carrossel"></li>
+            <li class="carrossel"></li>
+        </ul>
+    </main>
+    <script>
+        const ul=document.querySelector('#carrossel')
+        var slide = 0
+
+        function slider()
+        {
+            slide++
+            if(slide >= ul.children.length)
+            {
+                slide = 0;
+            } 
+        ul.scrollTo({
+            left: slide*window.innerWidth,
+            behavior: 'smooth'
+        })
+        }
+        setInterval(slider, 2000)
+    </script>
+</body>
+</html>
